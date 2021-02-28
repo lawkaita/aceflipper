@@ -17,7 +17,7 @@ $index = @(
   '[x]', 'index_tweaks',
   '[ ]', 'index_mission',
   '[x]', 'index_main',
-  '[ ]', 'index_medical'
+  '[x]', 'index_medical'
 )
 $index_ai = @(
   '[x]', 'ace_ai',
@@ -164,7 +164,7 @@ $index_interaction=@(
   #  - depends: ace_interaction
   #  - needed by: 
 
-  '[x]', 'ace_reload',
+  '[ ]', 'ace_reload',
   #  - depends: ace_interaction
   #  - needed by: 
 
@@ -239,6 +239,10 @@ $index_control=@(
 )
 
 $index_extraRealism=@(
+
+  '[x]', 'ace_scopes',
+  #  - depends: ace_common
+  #  - needed by: ace_rangecard
 
   '[x]', 'ace_ballistics',
   #  - depends: ace_common
@@ -338,10 +342,6 @@ $index_items=@(
   #  - depends: ace_common
   #  - needed by: 
 
-  '[x]', 'ace_scopes',
-  #  - depends: ace_common
-  #  - needed by: ace_rangecard
-
   '[x]', 'ace_grenades',
   #  - depends: ace_common
   #  - needed by: 
@@ -373,7 +373,7 @@ $index_air=@(
   #  - depends: ace_common
   #  - needed by: 
 
-  '[x]', 'ace_gforces',
+  '[ ]', 'ace_gforces',
   #  - depends: ace_common
   #  - needed by: 
 

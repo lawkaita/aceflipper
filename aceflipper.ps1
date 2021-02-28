@@ -68,10 +68,14 @@ function flip-eachAddon {
     $i = $i + 2
   }
 }
+
+if ( -not (Test-Path -PathType Container $aceDest)) {
+  Copy-Item -Path "$aceSrc" -Recurse -Destination "$aceDest"
+}
 . .\aceflipper_selections.ps1
 
 push-location
-cd $aceTarget
+cd "$aceTarget"
 flip-eachAddon
 pop-location
 
