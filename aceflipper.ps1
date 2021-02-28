@@ -71,6 +71,11 @@ function flip-eachAddon {
 
 if ( -not (Test-Path -PathType Container $aceDest)) {
   Copy-Item -Path "$aceSrc" -Recurse -Destination "$aceDest"
+  push-location
+  cd "$aceDest"
+  Remove-Item .\mod.cpp
+  Remove-Item .\meta.cpp
+  pop-location
 }
 . .\aceflipper_selections.ps1
 
